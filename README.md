@@ -10,7 +10,7 @@ The FGDBStandardsTools.tbx toolbox contains all the tools.  Source scripts for t
 are contained in their individual folders.
 
 ## Requirements
-Requires ESRI ArcInfo licensing.
+Requires ESRI ArcInfo licensing & ArcMap 10.0+.
 
 ## Getting Help or Reporting an Issue
 Use the Issues tab to get help or report any issues.
