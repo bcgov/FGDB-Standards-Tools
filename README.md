@@ -1,6 +1,4 @@
-# FGDB-Standards-Tools
-
-FGDBStandardsTools - File Geodatabase Standards Tools.
+# File Geodatabase Standards Tools
 
 ## Usage
 The File Geodatabase Standards Tools were developed to help in applying the 
