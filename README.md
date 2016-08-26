@@ -2,6 +2,7 @@
 
 FGDBStandardsTools - File Geodatabase Standards Tools.
 
+## Usage
 The File Geodatabase Standards Tools were developed to help in applying the 
 GeoBC File Geodatabase Standards.  Please refer to the GeoBC File Geodatabase Standards 
 document (http://geobc.gov.bc.ca/common/specs/file_geodatabase_standards.pdf) for further
@@ -10,9 +11,13 @@ further information about these tools and the standards they help enforce.
 The FGDBStandardsTools.tbx toolbox contains all the tools.  Source scripts for these tools 
 are contained in their individual folders.
 
+## Requirements
+Requires ESRI ArcInfo licensing.
 
-###Tool Descriptions:
+## Getting Help or Reporting an Issue
+Use the Issues tab to get help or report any issues.
 
+## Tool Descriptions:
 **CheckFGDB - Checking/Reporting Tool**
 
 	This tool inventories the contents of a file geodatabase  reporting out into text 
@@ -52,13 +57,10 @@ are contained in their individual folders.
 	FGDB, and (optionally) zips the FGDB giving it a name <FGDB name>.gdb.zip. 
 
 
-##License
+## License
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence"
 style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span
 xmlns:dct="http://purl.org/dc/terms/" property="dct:title">FGDB-Standards-Tools</span> by <span
 xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">the Province of Britich Columbia
 </span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
 Creative Commons Attribution 4.0 International License</a>.
-
-
-
