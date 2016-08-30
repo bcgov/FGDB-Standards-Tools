@@ -1,0 +1,57 @@
+# ---------------------------------------------------------------------------
+# ApplyDefaulTology.py
+# ---------------------------------------------------------------------------
+#
+# Purpose: This script will create a topology element and apply generic topology rules to each feature class.
+#		Generic Topology Rules that are applied:
+#			Polygons:  
+#				   Must not overlap
+#				   Must not have gaps
+#				   Must be covered by feature class of (applied if Boundary Polygon argument is used)
+#			Lines:	   
+#				   Must not have pseudonodes
+#				   Must not self intersect
+#				   Must not self overlap
+#				   Must be inside (applied if Boundary Polygon argument is used)
+#			Points:
+#				   Must be properly inside polygons (applied if Boundary Polygon argument is used)
+#
+# Created on: October 2008
+# Updated April 2009:  Corrected rules for lines and points overlapping with project boundary.
+# Updated November 2012:  Dana Diotte updated for ArcGIS 10.0
+#
+# Usage: ApplyDefaultTopology.py <Feature_Dataset><Topology_Name><Feature_Class{;Feature_Class}...>{Cluster_Tolerance}{Boundary_Polygon}{Validate}
+# Arguments:
+#	Feature_Dataset - Feature Dataset to create the topology element in (and where the Feature Classes to apply topology to reside)
+#	Topology_Name	- Name of the topology element
+#	Feature_Class(es) - Feature Class or Feature Classes to apply topology to.  
+#				When multiple feature classes are selected separate feature classes by a semi colon.
+#				When multiple feature classes are selected, their RANK is determined by their order.
+#	Cluster_Tolerance - Will default to the XY tolerance of the feature dataset in Meters. 
+#	Boundary_Polygon - The boundary to make sure features are within.
+#	Validate	- Boolean variable.  When populated the topology will be validated.
+#
+# Outputs:
+#	A topology element set up according to parameters
+#
+# Dependencies (Deprecated):
+#	This tool requires that the 'AddRuleToTopologyModel' model exist within the 'ApplyDefaultTopology.tbx 
+#	toolbox in the same directory as the source python code for this script tool.  
+#	This model runs the 'Add Rule To Topology' tool.  It is called as a work around to correct 
+#	a known error (in 9.2 and 9.3) preventing the tool from running when called through a script tool.  
+#	
+#
+# History:
+#	November 8, 2012
+#	~ Updated script to use arcpy for ArcGIS 10+
+#	~ Added alias 'defaultTopo' to stand alone toolbox in order for the new ImportToolbox to work (Deprecated)
+#	~ Updated script to use arcpy for ArcGIS 10+
+#   	~ added new topology rule for lines "must be inside"
+#   	~ removed custom model as it is not necessary in ArcGIS 10 (SP5) and higher
+#   	~ The "obtained from" was available in 9.2 (it was called Dependency) for FeatureLayer but has been removed 
+#       in the supported type at 9.3/10.x. It was found the this this scripts parameters for "Participating
+#       Feature Class" and subsequently removed.
+#
+# Level of Licensing:
+#	Requires ArcInfo licensing
+# ---------------------------------------------------------------------------
