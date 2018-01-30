@@ -2,9 +2,8 @@
 
 ## Usage
 The File Geodatabase Standards Tools were developed to help in applying the 
-GeoBC File Geodatabase Standards.  Please refer to the GeoBC File Geodatabase Standards 
-document (http://geobc.gov.bc.ca/common/specs/file_geodatabase_standards.pdf) for further
-further information about these tools and the standards they help enforce.
+GeoBC File Geodatabase Standards.  Please refer to the GeoBC [File Geodatabase Standards](https://www2.gov.bc.ca/assets/gov/data/geographic/bcgw/file_geodatabase_standards.pdf) 
+document for further information about these tools and the standards they help enforce.
 
 The FGDBStandardsTools.tbx toolbox contains all the tools.  Source scripts for these tools 
 are contained in their individual folders.
